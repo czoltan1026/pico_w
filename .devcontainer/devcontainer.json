@@ -1,0 +1,19 @@
+{
+  "build": {
+    // Path is relative to the devcontainer.json file.
+    "dockerfile": "Dockerfile"
+  },
+  "runArgs": [
+    "--privileged",
+    "--device=/dev/ttyACM0:/dev/ttyACM0"
+  ],
+  "workspaceFolder": "/workspaces/pico_w",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-vscode.cpptools",
+        "llvm-vs-code-extensions.vscode-clangd"
+      ]
+    }
+  }
+}
