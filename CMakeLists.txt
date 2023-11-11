@@ -8,6 +8,9 @@ project(my_project)
 # initialize the Raspberry Pi Pico SDK
 pico_sdk_init()
 
+
+add_compile_options(-I/usr/include/newlib/c++/10.3.1/ -I/usr/include/newlib/ -I/usr/include/newlib/c++/10.3.1/arm-none-eabi/thumb/v6-m/nofp/)
+
 add_executable(hello_world
     main.cpp
 )
