@@ -4,14 +4,49 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "echo",
+            "label": "build",
             "type": "shell",
-            "command": "make all -j 12",
+            "command": "make build -j 12",
             "problemMatcher": [],
             "group": {
-                "kind": "build",
-                "isDefault": true
+                "kind": "build"
             }
-        }
+        },
+        {
+            "label": "flash",
+            "type": "shell",
+            "command": "make flash -j 12",
+            "problemMatcher": [],
+            "group": {
+                "kind": "build"
+            }
+        },
+        {
+            "label": "clean",
+            "type": "shell",
+            "command": "make clean",
+            "problemMatcher": [],
+            "group": {
+                "kind": "build"
+            }
+        },
+        {
+            "label": "minicom",
+            "type": "shell",
+            "command": "minicom -b 115200 -o -D /dev/ttyACM0",
+            "problemMatcher": [],
+            "group": {
+                "kind": "build"
+            }
+        },
+        {
+            "label": "compile_commands.json",
+            "type": "shell",
+            "command": "make -j 12 build/compile_commands.json",
+            "problemMatcher": [],
+            "group": {
+                "kind": "build"
+            }
+        },
     ]
 }
