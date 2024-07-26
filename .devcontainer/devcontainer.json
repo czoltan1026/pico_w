@@ -5,9 +5,9 @@
   },
   "runArgs": [
     "--privileged",
-    "-v=/dev/ttyACM0:/dev/ttyACM0",
     "-v/dev/bus/usb/:/dev/bus/usb/"
   ],
+  "mounts": ["source=/dev/,target=/dev/,type=bind"],
   "workspaceFolder": "/workspaces/pico_w",
   "customizations": {
     "vscode": {

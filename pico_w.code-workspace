@@ -1,10 +1,24 @@
 {
     "folders": [
         {
+            "name": "pico_w",
             "path": "."
         },
         {
-            "path": "/workspaces/pico-sdk"
+            "name": "pico-sdk",
+            "path": "../pico-sdk"
+        },
+        {
+            "path": "../cpp-httplib"
+        },
+        {
+            "path": "../openocd"
+        },
+        {
+            "path": "../../usr/lib/udev/rules.d"
+        },
+        {
+            "path": "../asio-1.30.2"
         }
     ],
     "settings": {
@@ -13,7 +27,13 @@
         ],
         "clangd.path": "clangd",
         "C_Cpp.autocomplete": "disabled",
+        "C_Cpp.clang_format_style": "file",
+        "C_Cpp.clang_format_fallbackStyle": "none",
+        "C_Cpp.clang_format_path": "asd",
         "clangd.onConfigChanged": "ignore",
-        "clangd.restartAfterCrash": false
+        "clangd.restartAfterCrash": false,
+        "clang-format.fallbackStyle": "none",
+        "clang-format.executable": "/usr/local/bin/clang-format --verbose",
+        "clang-format.style": "file"
     }
 }

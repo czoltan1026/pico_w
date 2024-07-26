@@ -22,6 +22,24 @@
             }
         },
         {
+            "label": "flash_and_log",
+            "type": "shell",
+            "command": "make flash_and_log -j 12",
+            "problemMatcher": [],
+            "group": {
+                "kind": "build"
+            }
+        },
+        {
+            "label": "reboot and minicom",
+            "type": "shell",
+            "command": "picotool reboot -f -F  && sleep 2 && minicom -b 115200 -o -D /dev/ttyACM0",
+            "problemMatcher": [],
+            "group": {
+                "kind": "build"
+            }
+        },
+        {
             "label": "clean",
             "type": "shell",
             "command": "make clean",
@@ -34,6 +52,24 @@
             "label": "minicom",
             "type": "shell",
             "command": "minicom -b 115200 -o -D /dev/ttyACM0",
+            "problemMatcher": [],
+            "group": {
+                "kind": "build"
+            }
+        },
+        {
+            "label": "stop",
+            "type": "shell",
+            "command": "picotool info -f &> /dev/null && echo stopped",
+            "problemMatcher": [],
+            "group": {
+                "kind": "build"
+            }
+        },
+        {
+            "label": "reboot",
+            "type": "shell",
+            "command": "picotool reboot -f",
             "problemMatcher": [],
             "group": {
                 "kind": "build"
